@@ -1,7 +1,7 @@
 import {NgModule} from '@angular/core';
 import {BrowserModule} from '@angular/platform-browser';
 import {routing, RootComponent} from './routes';
-import { HttpModule, JsonpModule } from '@angular/http';
+import { HttpModule, Http, XHRBackend, RequestOptions } from '@angular/http';
 
 // import {TechsModule} from './techs';
 
@@ -11,6 +11,7 @@ import {MainComponent} from './pages/main/main';
 
 import {HeaderComponent} from './components/header/header';
 import {FooterComponent} from './components/footer/footer';
+import {LoaderComponent} from './components/loader/loader';
 
 import { GameService } from './services/game.service';
 import { HttpCherry } from './services/httpCherry';
@@ -18,9 +19,8 @@ import { HttpCherry } from './services/httpCherry';
 @NgModule({
   imports: [
     BrowserModule,
-    routing, 
-    HttpModule,
-    JsonpModule
+    routing,
+    HttpModule
     // module TechsModule
   ],
   declarations: [
@@ -28,13 +28,19 @@ import { HttpCherry } from './services/httpCherry';
     MainComponent,
     BrowseComponent,
     HeaderComponent,
+    LoaderComponent,
     GameComponent,
     FooterComponent
   ],
   providers: [
     GameService,
-    HttpCherry,
-    GameService
+    {
+      provide: Http,
+      useFactory: (backend: XHRBackend, defaultOptions: RequestOptions) => {
+        return new HttpCherry(backend, defaultOptions);
+      },
+      deps: [ XHRBackend, RequestOptions]
+    }
   ],
   bootstrap: [RootComponent]
 })
