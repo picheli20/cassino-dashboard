@@ -42,7 +42,9 @@ module.exports = {
         loaders: [
           'html-loader'
         ]
-      }
+      },
+      { test: /\.(eot|woff|woff2|svg|ttf|png)([\?]?.*)$/, loader: "file-loader" },
+      { test: /\.woff(2)?(\?v=[0-9]\.[0-9]\.[0-9])?$/, loader: "url-loader?limit=10000&mimetype=application/font-woff" }
     ]
   },
   plugins: [

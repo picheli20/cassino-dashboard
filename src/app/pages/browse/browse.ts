@@ -9,6 +9,6 @@ import {Component} from '@angular/core';
 export class BrowseComponent {
 	result : any = [];
 	constructor ( private game: GameService ) {
-		// game.get().subscribe(result => this.result =result.json());
+		game.get().map(res => res.text()).subscribe(result => this.result = result);
 	}
 }
