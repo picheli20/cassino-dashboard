@@ -1,3 +1,6 @@
+import './header.scss';
+
+
 import {Component} from '@angular/core';
 
 @Component({

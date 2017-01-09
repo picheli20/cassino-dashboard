@@ -8,7 +8,6 @@ import {BrowseComponent} from './pages/browse/browse';
 import {GameComponent} from './pages/game/game';
 import {MainComponent} from './pages/main/main';
 import {HeaderComponent} from './components/header/header';
-import {TitleComponent} from './components/title/title';
 import {FooterComponent} from './components/footer/footer';
 
 @NgModule({
@@ -23,7 +22,6 @@ import {FooterComponent} from './components/footer/footer';
     BrowseComponent,
     HeaderComponent,
     GameComponent,
-    TitleComponent,
     FooterComponent
   ],
   bootstrap: [RootComponent]

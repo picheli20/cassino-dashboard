@@ -1,3 +1,5 @@
+import './footer.scss';
+
 import {Component} from '@angular/core';
 
 @Component({
