@@ -2,8 +2,6 @@ import {Component} from '@angular/core';
 import {TestBed, async} from '@angular/core/testing';
 import {MainComponent} from './main';
 
-@Component({selector: 'fountain-techs', template: ''})
-class MockTechsComponent {}
 @Component({selector: 'fountain-footer', template: ''})
 class MockFooterComponent {}
 @Component({selector: 'fountain-header', template: ''})
@@ -16,7 +14,6 @@ describe('Main Component', () => {
     TestBed.configureTestingModule({
       declarations: [
         MainComponent,
-        MockTechsComponent,
         MockFooterComponent,
         MockHeaderComponent,
         MockTitleComponent
@@ -31,7 +28,6 @@ describe('Main Component', () => {
     const main = fixture.nativeElement;
     expect(main.querySelector('fountain-header')).toBeDefined();
     expect(main.querySelector('fountain-title')).toBeDefined();
-    expect(main.querySelector('fountain-techs')).toBeDefined();
     expect(main.querySelector('fountain-footer')).toBeDefined();
   });
 });
