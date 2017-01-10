@@ -1,5 +1,3 @@
-import './main.scss';
-
 import { CategoryService } from '../../services/category.service';
 import { Component } from '@angular/core';
 

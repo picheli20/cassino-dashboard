@@ -1,8 +1,6 @@
-import './slider.scss';
-
 import { Component, Input, ElementRef, ViewChild, trigger, transition, style, animate } from '@angular/core';
-import { iCategory } from '../../interfaces/category.interface';
-import { iGame } from '../../interfaces/game.interface';
+import { ICategory } from '../../interfaces/category.interface';
+import { IGame } from '../../interfaces/game.interface';
 
 @Component({
   selector: 'slider',
@@ -25,8 +23,8 @@ import { iGame } from '../../interfaces/game.interface';
 export class SliderComponent {
 	@ViewChild('sliderContainer')
 	sliderContainer: ElementRef;
-	@Input() data: iCategory;
-	games : iGame[];
+	@Input() data: ICategory;
+	games : IGame[];
 
 	searchModel : any;
 	containerHeightDefault : number = 290;

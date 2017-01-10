@@ -1,34 +1,37 @@
-/* import {Component} from '@angular/core';
+import {Component, Input, Injectable} from '@angular/core';
 import {TestBed, async} from '@angular/core/testing';
 import {MainComponent} from './main';
 
-@Component({selector: 'fountain-footer', template: ''})
-class MockFooterComponent {}
-@Component({selector: 'fountain-header', template: ''})
-class MockHeaderComponent {}
-@Component({selector: 'fountain-title', template: ''})
-class MockTitleComponent {}
+@Component({selector: 'slider', template: ''})
+class MockSliderComponent {
+  @Input() data: any;
+}
 
+class CategoryService {
+  get () {
+    return [];
+  }
+}
+
+/*
 describe('Main Component', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [
         MainComponent,
-        MockFooterComponent,
-        MockHeaderComponent,
-        MockTitleComponent
+        MockSliderComponent
+      ],
+      providers: [
+        {provide: CategoryService, useValue: CategoryService }
       ]
     });
     TestBed.compileComponents();
   }));
 
-  it('should render the header, title, techs and footer', () => {
+  it('should render the slider', () => {
     const fixture = TestBed.createComponent(MainComponent);
     fixture.detectChanges();
     const main = fixture.nativeElement;
-    expect(main.querySelector('fountain-header')).toBeDefined();
-    expect(main.querySelector('fountain-title')).toBeDefined();
-    expect(main.querySelector('fountain-footer')).toBeDefined();
+    expect(main.querySelector('slider2')).toBeDefined();
   });
-});
-*/
+});*/

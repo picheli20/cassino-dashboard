@@ -1,5 +1,5 @@
-export interface iMeta {
-    "description_short": string;
-    "currency": string;
-    "bonus": boolean
+export interface IMeta {
+    'description_short': string;
+    'currency': string;
+    'bonus': boolean;
 };

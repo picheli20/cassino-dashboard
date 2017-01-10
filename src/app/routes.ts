@@ -5,8 +5,8 @@ import {BrowseComponent} from './pages/browse/browse';
 import {GameComponent} from './pages/game/game';
 
 @Component({
-  selector: 'fountain-root',
-  template: '<router-outlet></router-outlet>'
+  selector: 'root',
+  template: '<loader></loader><fountain-header></fountain-header><router-outlet></router-outlet>'
 })
 export class RootComponent {}
 

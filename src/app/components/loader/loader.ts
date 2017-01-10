@@ -1,5 +1,3 @@
-import './loader.scss';
-
 import {Component} from '@angular/core';
 import { Loader } from '../../entities/loader.entity';
 

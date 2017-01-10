@@ -10,6 +10,14 @@ import 'rxjs';
 
 import './index.scss';
 
+import './app/components/game-wrapper/game-wrapper.scss';
+import './app/components/header/header.scss';
+import './app/components/loader/loader.scss';
+import './app/components/slider/slider.scss';
+
+import './app/pages/main/main.scss';
+import './app/pages/game/game.scss';
+
 import {enableProdMode} from '@angular/core';
 import {platformBrowserDynamic} from '@angular/platform-browser-dynamic';
 import {AppModule} from './app';

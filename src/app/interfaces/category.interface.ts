@@ -1,8 +1,8 @@
-import { iGame } from './game.interface';
+import { IGame } from './game.interface';
 
-export interface iCategory {
+export interface ICategory {
     '_embedded': {
-        'games' : iGame[];   
+        'games' : IGame[];
     };
     'name': string;
     'order': number;

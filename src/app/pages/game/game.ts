@@ -1,6 +1,5 @@
-import './game.scss';
 import { GameService } from '../../services/game.service';
-import { iGame } from '../../interfaces/game.interface';
+import { IGame } from '../../interfaces/game.interface';
 
 import {Component} from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
@@ -16,7 +15,7 @@ interface IParams {
 
 export class GameComponent {
 	id : string;
-	result : iGame;
+	result : IGame;
 
 	constructor(private route: ActivatedRoute, private gameS: GameService) {}
 
