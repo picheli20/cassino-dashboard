@@ -3,11 +3,16 @@ import { Http } from '@angular/http';
 
 @Injectable()
 export class CategoryService {
-	private apiUrl = 'https://staging-frontapi.cherrytech.com';
+	private _categories;
 
 	constructor(private http: Http) { }
 
 	get () {
-	 	return this.http.get(this.apiUrl + '/game-categories');
+		if (!this._categories) {
+			this._categories = this.http.get('/game-categories')
+									.publishReplay(1)
+									.refCount();
+		}
+		return this._categories;
 	}
 }

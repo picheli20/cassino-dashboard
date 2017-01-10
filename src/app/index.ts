@@ -1,19 +1,19 @@
 import {NgModule} from '@angular/core';
 import {BrowserModule} from '@angular/platform-browser';
+import {FormsModule} from '@angular/forms';
 import {routing, RootComponent} from './routes';
 import { HttpModule, Http, XHRBackend, RequestOptions } from '@angular/http';
-
-// import {TechsModule} from './techs';
 
 import {BrowseComponent} from './pages/browse/browse';
 import {GameComponent} from './pages/game/game';
 import {MainComponent} from './pages/main/main';
 
 import {HeaderComponent} from './components/header/header';
-import {FooterComponent} from './components/footer/footer';
 import {LoaderComponent} from './components/loader/loader';
 import {SliderComponent} from './components/slider/slider';
 import {GameWrapperComponent} from './components/game-wrapper/game-wrapper';
+
+import {FilterPipe} from './pipes/filter';
 
 import { GameService } from './services/game.service';
 import { CategoryService } from './services/category.service';
@@ -23,8 +23,8 @@ import { HttpCherry } from './services/httpCherry';
   imports: [
     BrowserModule,
     routing,
-    HttpModule
-    // module TechsModule
+    HttpModule,
+    FormsModule
   ],
   declarations: [
     RootComponent,
@@ -33,9 +33,9 @@ import { HttpCherry } from './services/httpCherry';
     HeaderComponent,
     LoaderComponent,
     GameComponent,
-    FooterComponent,
     SliderComponent,
-    GameWrapperComponent
+    GameWrapperComponent,
+    FilterPipe
   ],
   providers: [
     GameService,

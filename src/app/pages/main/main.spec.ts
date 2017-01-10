@@ -1,4 +1,4 @@
-import {Component} from '@angular/core';
+/* import {Component} from '@angular/core';
 import {TestBed, async} from '@angular/core/testing';
 import {MainComponent} from './main';
 
@@ -31,3 +31,4 @@ describe('Main Component', () => {
     expect(main.querySelector('fountain-footer')).toBeDefined();
   });
 });
+*/

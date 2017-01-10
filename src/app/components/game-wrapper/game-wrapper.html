@@ -1,4 +1,10 @@
-<div class="game-wrapper">
-    <img [src]="game.thumbnail">
-    <h4>{{game.name}}</h4>
+<div class="col-lg-2 col-md-3 col-sm-3 col-xs-6 game-container">
+	<div class="thumbnail game-wrapper" [routerLink]="['/game', game.id]">
+		<div class="image">
+	    	<img [src]="game.thumbnail" alt="{{game.name}}">
+		</div>
+	    <div class="caption">
+	        <h4 title="{{game.name}}">{{game.name}}<span class="paragraph-end"></span></h4>
+	    </div>
+	</div>
 </div>

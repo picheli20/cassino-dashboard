@@ -1,16 +1,12 @@
-.header {
-    display: flex;
-    align-items: center;
-    background-color: #1f1f1f;
-    .header-title {
-        flex: 1;
-        font-size: 1.5rem;
-        margin: 1rem;
+.navbar {
+    .container{
+        @media (min-width: 768px){
+            padding: 0;
+        }
     }
-    .header-date {
-        flex: 1;
-        text-align: right;
-        margin: 1rem;
-        color: white;
+    .navbar-nav{
+        & > li{
+            float: left
+        }
     }
 }

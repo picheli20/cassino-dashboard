@@ -1,7 +1,7 @@
-<div class="main-container">
-  <fountain-header></fountain-header>
-  <main class="main">
-  	<h3>Game {{id}}</h3>
-  </main>
-  <fountain-footer></fountain-footer>
+<fountain-header></fountain-header>
+<div class="game-page" *ngIf="result" [ngStyle]="{'background-image' : 'url(' + result?.background + ')'}">
+	<div class="game">
+		<h3>{{result?.name}}</h3>
+		<div class="game-loader" [ngStyle]="{'background-image' : 'url(' + getLoaderBg() + ')'}"></div>
+	</div>
 </div>

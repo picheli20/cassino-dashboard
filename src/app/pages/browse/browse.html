@@ -1,8 +1,10 @@
-<div class="main-container">
-    <fountain-header></fountain-header>
-    <main class="main">
-        <h3>All Games</h3>
-        {{result}}
-    </main>
-    <fountain-footer></fountain-footer>
+<fountain-header></fountain-header>
+<div class="browser container container-white" *ngIf="result">
+    <div class="search row">
+        <h3 class="col-xs-6 col-sm-8">Game Browse</h3>
+        <div class="col-xs-6 col-sm-4 input-title">
+            <input [(ngModel)]="searchModel" placeholder="Search" class="form-control">
+        </div>
+    </div>
+    <game-wrapper *ngFor="let item of result | filter:'name':searchModel" [game]='item'></game-wrapper>
 </div>

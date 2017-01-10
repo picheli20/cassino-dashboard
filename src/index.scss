@@ -6,6 +6,10 @@ body,
     font-family: 'Open Sans', sans-serif;
 }
 
+body{
+  background-image: url('/assets/texture.jpg');
+}
+
 body,
 h1,
 h2,
@@ -30,4 +34,38 @@ a {
   &:after {
     clear: both;
   }
+}
+
+.input-title{
+    padding: 15px;
+}
+
+.container-white{
+  background: #edf1f2;
+  box-shadow: 0 0 20px #000;
+  margin-top: -10px;
+}
+
+.paragraph-end{
+  background-image: -webkit-gradient(linear,left top,right top,color-stop(0%,rgba(255,255,255,0)),color-stop(100%,rgba(255,255,255,1)));
+  background-image: -webkit-linear-gradient(left,rgba(255,255,255,0),rgba(255,255,255,1));
+  background: linear-gradient(to right,rgba(255,255,255,0),rgba(255,255,255,1));
+  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=1,StartColorStr='#00ffffff',EndColorStr='#ffffff');
+  bottom: 0;
+  height: 25px;
+  max-height: 100%;
+  position: absolute;
+  right: 0;
+  width: 60px;
+}
+
+@-webkit-keyframes rotate {
+    0% {
+        -webkit-transform: rotate(0);
+        transform: rotate(0)
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg)
+    }
 }

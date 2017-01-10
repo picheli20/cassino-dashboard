@@ -1,5 +1,4 @@
 import { GameService } from '../../services/game.service';
-
 import {Component} from '@angular/core';
 
 @Component({
@@ -8,7 +7,8 @@ import {Component} from '@angular/core';
 })
 export class BrowseComponent {
 	result : any = [];
+	searchModel : any;
 	constructor ( private game: GameService ) {
-		game.get().map(res => res.text()).subscribe(result => this.result = result);
+		game.get().subscribe(result => this.result = result);
 	}
 }

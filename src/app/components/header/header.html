@@ -1,11 +1,23 @@
 <loader></loader>
 <header class="header">
-  <p class="header-title">
-    <a [routerLink]="['/']">
-      Fountain Generator
-    </a>
-  </p>
-  <p class="header-date">
-    FountainJS
-  </p>
+    <p class="header-title">
+        <a [routerLink]="['/']">
+Fountain Generator
+</a>
+    </p>
+    <p class="header-date">
+        FountainJS
+    </p>
 </header>
+<nav class="navbar navbar-fixed-top navbar-inverse">
+    <div class="container">
+        <ul class="nav navbar-nav">
+            <li><a [routerLink]="['/']">Categories</a></li>
+            <li>
+                <a [routerLink]="['/browse']">
+                    Game Browse
+                </a>
+            </li>
+        </ul>
+    </div>
+</nav>

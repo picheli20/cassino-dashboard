@@ -3,12 +3,14 @@
     "@angular/common": "^2.0.0",
     "@angular/compiler": "^2.0.0",
     "@angular/core": "^2.0.0",
+    "@angular/forms": "^2.4.2",
     "@angular/http": "^2.0.0",
     "@angular/platform-browser": "^2.0.0",
     "@angular/platform-browser-dynamic": "^2.0.0",
     "@angular/router": "^3.0.0",
+    "bootstrap": "^3.3.7",
     "core-js": "^2.4.1",
-    "font-awesome-sass-loader": "^1.0.3",
+    "font-awesome": "^4.7.0",
     "rxjs": "5.0.0-beta.12",
     "zone.js": "^0.6.23"
   },
@@ -53,6 +55,7 @@
     "tslint": "^3.2.1",
     "tslint-loader": "^2.1.0",
     "typescript": "^2.1.0",
+    "url-loader": "^0.5.7",
     "webpack": "2.1.0-beta.27",
     "webpack-fail-plugin": "^1.0.5"
   },

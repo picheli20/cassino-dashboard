@@ -1,10 +1,7 @@
-<div class="main-container">
-  <fountain-header></fountain-header>
-  <main class="main">
-  	<div class="big-banner"></div>
-    <div class="main-sliders-cotent">
-      <slider *ngFor='let category of result?._embedded?.game_categories' [data]='category'></slider>
-    </div>
-  </main>
-  <fountain-footer></fountain-footer>
-</div>
+<fountain-header></fountain-header>
+<main class="main container container-white">
+	<!--div class="big-banner"></div-->
+	<div class="main-sliders-cotent">
+		<slider *ngFor='let category of result?._embedded?.game_categories' [data]='category'></slider>
+	</div>
+</main>

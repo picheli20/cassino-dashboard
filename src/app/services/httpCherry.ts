@@ -5,30 +5,38 @@ import { Loader } from '../entities/loader.entity';
 
 @Injectable()
 export class HttpCherry extends Http {
+	private apiUrl = 'https://staging-frontapi.cherrytech.com';
 
 	constructor(backend: ConnectionBackend, defaultOptions: RequestOptions) {
 		super(backend, defaultOptions);
 	}
+
+	// overwritting the get methor from HTTP
 	get(url: string): Observable<Response> {
-		Loader.add();
-		let headers = new Headers(
-			{
+		let options = new RequestOptions({
+			headers: new Headers({
 				'CherryTech-Brand': 'cherrycasino.desktop',
 				'Accept-Language': 'en-GB'
-			});
-		let options = new RequestOptions({ headers: headers });
-
-		return this.removeLoading(super.get(url, options));
+			})
+		});
+		return this.removeLoading(super.get(this.apiUrl + url, options));
 	}
 
 	removeLoading(obs: Observable<Response>): Observable<Response> {
-		// return a new Observable bacause we need to remove the loader (too many code, i know)
+		Loader.add();
+		// return remove the loader and return new Observable 
 		return Observable.create(observer => {
-			obs.subscribe((data) => {
-				Loader.remove();
-				observer.next(data);
-				observer.complete();
-			});
+			obs	.publishReplay(1)
+				.refCount()
+				.subscribe((data) => {
+					Loader.remove();
+					observer.next(data);
+					observer.complete();
+				}, (error) => {
+					console.error(error);
+					Loader.remove();
+					observer.complete();
+				});
 		});
 	}
 

@@ -1,3 +1,7 @@
+import 'font-awesome/scss/font-awesome.scss';
+import 'bootstrap/dist/css/bootstrap-theme.css';
+import 'bootstrap/dist/css/bootstrap.css';
+
 import 'core-js/client/shim';
 import 'zone.js/dist/zone';
 
