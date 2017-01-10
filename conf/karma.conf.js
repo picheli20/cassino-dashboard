@@ -33,25 +33,14 @@ module.exports = function (config) {
     webpackMiddleware: {
       noInfo: true
     },
-    customLaunchers: {
-      Chrome_travis_ci: {
-        base: 'Chrome',
-        flags: ['--no-sandbox']
-      }
-    },
     plugins: [
       require('karma-jasmine'),
       require('karma-junit-reporter'),
       require('karma-coverage'),
       require('karma-chrome-launcher'),
-      require('karma-firefox-launcher'),
       require('karma-webpack')
     ]
   };
-
-  if (process.env.TRAVIS) {
-      configuration.browsers = ['Firefox'];
-  }
-
+  
   config.set(configuration);
 };
