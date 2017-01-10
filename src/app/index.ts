@@ -14,6 +14,7 @@ import {SliderComponent} from './components/slider/slider';
 import {GameWrapperComponent} from './components/game-wrapper/game-wrapper';
 
 import {FilterPipe} from './pipes/filter';
+import {SortPipe} from './pipes/sort';
 
 import { GameService } from './services/game.service';
 import { CategoryService } from './services/category.service';
@@ -35,7 +36,8 @@ import { HttpCherry } from './services/httpCherry';
     GameComponent,
     SliderComponent,
     GameWrapperComponent,
-    FilterPipe
+    FilterPipe,
+    SortPipe
   ],
   providers: [
     GameService,

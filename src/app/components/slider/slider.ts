@@ -27,7 +27,7 @@ export class SliderComponent {
 	games : IGame[];
 
 	searchModel : any;
-	containerHeightDefault : number = 290;
+	containerHeightDefault : number = 260;
 	viewAll : boolean = false;
 
 	constructor (private element : ElementRef) {}

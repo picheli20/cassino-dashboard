@@ -1,6 +1,6 @@
-<main class="main container container-white">
-	<!--div class="big-banner"></div-->
+<main class="main container container-white" *ngIf="result._embedded">
+	<div class="big-banner"></div>
 	<div class="main-sliders-cotent">
-		<slider *ngFor='let category of result?._embedded?.game_categories' [data]='category'></slider>
+		<slider *ngFor='let category of result?._embedded?.game_categories | sort:"order"' [data]='category'></slider>
 	</div>
 </main>

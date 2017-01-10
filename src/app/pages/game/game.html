@@ -1,5 +1,6 @@
-<div class="game-page" *ngIf="result" [ngStyle]="{'background-image' : 'url(' + result?.background + ')'}">
-	<div class="game">
+<div class="game-page" *ngIf="result">
+	<div class="game container container-white">
+		<div class="big-banner"></div>
 		<h3>{{result?.name}}</h3>
 		<div class="game-loader" [ngStyle]="{'background-image' : 'url(' + getLoaderBg() + ')'}"></div>
 	</div>
