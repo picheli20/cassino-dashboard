@@ -10,7 +10,7 @@ module.exports = function (config) {
       outputDir: 'test-reports'
     },
     browsers: [
-      'PhantomJS'
+      'Chrome'
     ],
     frameworks: [
       'jasmine'
@@ -38,9 +38,13 @@ module.exports = function (config) {
       require('karma-junit-reporter'),
       require('karma-coverage'),
       require('karma-phantomjs-launcher'),
+      require('karma-chrome-launcher'),
       require('karma-webpack')
     ]
   };
+  if (process.env.TRAVIS) {
+        configuration.browsers = ['PhantomJS'];
+  }
   
   config.set(configuration);
 };
