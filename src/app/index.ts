@@ -12,8 +12,11 @@ import {MainComponent} from './pages/main/main';
 import {HeaderComponent} from './components/header/header';
 import {FooterComponent} from './components/footer/footer';
 import {LoaderComponent} from './components/loader/loader';
+import {SliderComponent} from './components/slider/slider';
+import {GameWrapperComponent} from './components/game-wrapper/game-wrapper';
 
 import { GameService } from './services/game.service';
+import { CategoryService } from './services/category.service';
 import { HttpCherry } from './services/httpCherry';
 
 @NgModule({
@@ -30,10 +33,13 @@ import { HttpCherry } from './services/httpCherry';
     HeaderComponent,
     LoaderComponent,
     GameComponent,
-    FooterComponent
+    FooterComponent,
+    SliderComponent,
+    GameWrapperComponent
   ],
   providers: [
     GameService,
+    CategoryService,
     {
       provide: Http,
       useFactory: (backend: XHRBackend, defaultOptions: RequestOptions) => {

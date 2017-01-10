@@ -1,2 +1,6 @@
-<i class="fa fa-circle-o" aria-hidden="true"></i>
-<div class="loader-container">Loading: {{loader.isLoading()}}</div>
+<div class="loader-container" *ngIf="loader.isLoading()">
+    <span>
+        {{loader.isLoading()}}
+        <img src="/assets/poke-chip.png">
+    </span>
+</div>

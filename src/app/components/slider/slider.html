@@ -1,0 +1,7 @@
+<div class="slider">
+    <h2>{{data.name}}</h2>
+    <div class="slider-items">
+        <game-wrapper *ngFor='let item of data._embedded.games' [game]='item'></game-wrapper>
+    </div>
+</div>
+<div class="clearfix"></div>
