@@ -10,7 +10,7 @@ module.exports = function (config) {
       outputDir: 'test-reports'
     },
     browsers: [
-      'Chrome'
+      'Firefox'
     ],
     frameworks: [
       'jasmine'
@@ -44,12 +44,13 @@ module.exports = function (config) {
       require('karma-junit-reporter'),
       require('karma-coverage'),
       require('karma-chrome-launcher'),
+      require('karma-firefox-launcher'),
       require('karma-webpack')
     ]
   };
 
   if (process.env.TRAVIS) {
-      configuration.browsers = ['Chrome_travis_ci'];
+      configuration.browsers = ['Firefox'];
   }
 
   config.set(configuration);
