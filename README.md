@@ -1,4 +1,4 @@
-# Book List
+# Cassino Dashboard
 [![Build Status](https://api.travis-ci.org/picheli20/cassino-dashboard.svg?branch=master)](http://travis-ci.org/picheli20/cassino-dashboard)
 Base generated with [FountainJS](http://fountainjs.io/).
 
