@@ -6,7 +6,7 @@ import { Loader } from '../../entities/loader.entity';
 
 
 
-describe('Main Component', () => {
+describe('Loader Component', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [
@@ -16,7 +16,20 @@ describe('Main Component', () => {
     TestBed.compileComponents();
   }));
 
-  it('should render the loader', () => {
+  it('should instantiate the LoaderComponent', () => {
+    expect(TestBed.createComponent(LoaderComponent)).not.toBe(null);
+  });
+
+  it('should show and hide the loader', () => {
     const fixture = TestBed.createComponent(LoaderComponent);
+    fixture.detectChanges();
+    const main = fixture.nativeElement;
+    expect(main.querySelector('.loader-container')).toBe(null);
+    Loader.add();
+    fixture.detectChanges();
+    expect(main.querySelector('.loader-container')).not.toBe(null);
+    Loader.remove();
+    fixture.detectChanges();
+    expect(main.querySelector('.loader-container')).toBe(null);
   });
 });
